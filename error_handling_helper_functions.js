@@ -50,6 +50,20 @@ errorTypes(-25);
 
 // TODO: Create a collection of helper functions for string manipulation
 
+function capitalizeString(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function reverseString(string) {
+    return string.split("").reverse().join("");
+}
+
+const testValue = "howdy neighbor!";
+console.log(capitalizeString(testValue));
+console.log(reverseString(testValue));
+
+// TODO: Create helper functions for array operations
+
 const OverwatchAgents =[
     {name: "Genji", role: "DPS"},
     {name: "McCree", role: "DPS"},
@@ -59,11 +73,10 @@ const OverwatchAgents =[
     {name: "Ana", role: "Support"}
 ];
 
-function filter_Agents(OverwatchAgents){
-    return OverwatchAgents.role == "DPS";
+function filter_Agents(agent){ 
+    return agent.role == "DPS"; // filters the array by the DPS role
 }
 
 const filtered_Agents = OverwatchAgents.filter(filter_Agents);
-console.log(JSON.stringify(filtered_Agents, null, 2));
+console.log(JSON.stringify(filtered_Agents, null, 2)); // displays the filtered array using JSON string.
 
-// TODO: Create helper functions for array operations
